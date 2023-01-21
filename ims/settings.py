@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "mathfilters",
     "buildings",
-    "admin_interface",
+    # "admin_interface",
     "members",
     "colorfield",
     "admin_reorder",
@@ -104,13 +104,13 @@ WSGI_APPLICATION = "ims.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": str(BASE_DIR / "db.sqlite3"),
     }
 }
 
 ADMIN_REORDER = (
     {"app": "admin_interface", "label": "Admin Interface"},
-    {"app": "auth", "models": ("auth.User", "auth.Group")},
+    # {"app": "auth", "models": ("auth.User")},
     {"app": "members", "label": "Members", "models": ("members.Members",)},
     {"app": "userlog", "label": "User Log", "models": ("userlog.UserLog",)},
     {

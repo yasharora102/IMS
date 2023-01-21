@@ -4,6 +4,7 @@ from easy_select2 import select2_modelform
 # Register your models here.
 from .models import Members
 
+from  django.contrib.auth.models  import Group
 
 @admin.register(Members)
 class MembersAdmin(admin.ModelAdmin):
